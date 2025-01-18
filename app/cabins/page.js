@@ -2,6 +2,10 @@ import { Suspense } from "react";
 import CabinList from "@/app/_components/CabinList";
 import Spinner from "@/app/_components/Spinner";
 
+// used for ISG (incremental static generation) by giving some number of seconds
+// export const revalidate = 0; // computation doesn't work here for eg 5 * 10 and 0 changes the static to dynamic
+export const revalidate = 3600;
+
 export const metadata = {
   title: "Cabins",
 };
